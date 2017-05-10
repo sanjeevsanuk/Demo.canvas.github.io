@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="http://pixolith.github.io/fabricjs-customise-controls-extension/dependencies/fabric/dist/fabric.min.js"></script>
+
+</head>
+<body>
+<canvas id="showCanvas" width="700" height="600"></canvas>
+<script>
+var obj = new fabric.Rect({
+            left: 5,
+            top: 10,
+            width: 310,
+            height: 200,
+            cornerColor: 'black',
+            cornerBackgroundColor:'black',
+            stroke:'black',
+            hasRotatingPoint: false,
+            selected: true,
+			selectable:true,
+			 transparentCorners: false,
+            fill: 'transparent'
+        });
+		var doubleCanvas = new fabric.Canvas('showCanvas');
+
+
+        doubleCanvas.add(obj);
+		doubleCanvas.setActiveObject(doubleCanvas.item(0));
+</script>
+</body>
+</html>
